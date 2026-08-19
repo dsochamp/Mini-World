@@ -4,8 +4,9 @@ from PIL import Image
 import random
 
 worldtype = input('Would you like "lava" or "regular"? (Type anything else for random colours)  ')
+worldsize = int(input('How big would you like your world (in px)?'))
 
-shape = (1024,1024)
+shape = (worldsize, worldsize)
 scale = 100.0
 octaves = 6
 persistence = 0.5
