@@ -22,3 +22,7 @@ Sheep generate similarly but at a lower rate. This coding ensures that boat colo
 - PIL (Python Image Library)
 - Noise
 - Random
+
+## Why I made it
+
+I made this project out of curiosity when I watched a YouTube video on how Minecraft works. I found a Medium article on how to use perlin noise inside python. Perlin noise generates randomness but with smooth transitions which makes it perfect to simulate world terrain generation which I found very fascinating.
