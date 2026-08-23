@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1 style='font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;'>Download the executable <a href='Executable.zip' download>here</a></h1>
+    <body style="color:white; background-color: rgb(0, 85, 127); font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        <div style='text-align: center; width: 80%; display: grid; grid-template-columns: 10% 90%;'>
+            <div></div>
+            <div>
+                <h2 style='color:white;'>Download the executable <a style='color: lightblue;' href='ExecutableZip.zip' download>here</a></h2>
+                <h2 style='color:white;'>Download the source code from the release <a style='color: lightblue;' href='https://github.com/dsochamp/Mini-World/releases/tag/%23procedural'>here</a> (in case the executable does not run on your OS)</h2>
+            <br>
+            <div style='line-height: 25px; text-align: justify; align-items: center; align-self: center; align-content: center;'>
+                <img src='https://user-cdn.hackclub-assets.com/01a0193a-ddb6-7865-8eff-90768306c4de/Image.png' style='border-radius:25px; corner-shape:squircle; height: 350px; width: 100%; overflow: hidden; overflow-x: hidden; object-fit: cover;'>
+                <br>
+                <h1> Mini World Generator - <a href="https://github.com/dsochamp/Mini-World" style="color: lightblue;">Github Repository</a></h1>
+                <br><br>
+                This mini world generator uses Perlin noise to generate randomly generated worlds. There are three world types, lava, regular and random which randomly generates colours. 
+
+                <h2> How to install </h2>
+
+                Open <a href='https://dsochamp.github.io/Mini-World'>dsochamp.github.io/Mini-World</a> and download the executable. This will be downloaded as a <span style="padding: 5px; background-color: lightgrey; color:black; border-radius:10px; corner-shape:squircle;  font-family: monospace;">.zip</span> file, unzip the zip file and navigate to the Dist folder and double click main. The executable may not work on Windows.
+
+                <h2> How it works </h2>
+
+                The Mini World Generator uses a Python library called noise to generate perlin noise from a seed. This noise initially produces a grayscale image.  We then use the grayscale values, representing the darkness of each pixel, to create elevation and associate it with colours.  In regular mode, the lowest elevation is the ocean, which is blue, while the highest is snow atop the mountains, which is white. A nested for loop assigns these colours to each pixel.
+
+                To generate boats, I used <span style="padding: 5px; background-color: lightgrey; color:black; border-radius:10px; corner-shape:squircle;  font-family: monospace;">random.randint(1, 500)</span> when the elevation falls within the ocean threshold.  If the number is 1, a boat is spawned, creating a 1/500 chance of spawning.  Since the loops iterate from left to right across each row, when a boat is created, <span style="padding: 5px; background-color: lightgrey; color:black; border-radius:10px; corner-shape:squircle;  font-family: monospace;">boatadd</span> is set to <span style="padding: 5px; background-color: lightgrey; color:black; border-radius:10px; corner-shape:squircle;  font-family: monospace;">True</span> and the pixel count increments by 1.  While <span style="padding: 5px; background-color: lightgrey; color:black; border-radius:10px; corner-shape:squircle;  font-family: monospace;">boatadd</span> is <span style="padding: 5px; background-color: lightgrey; color:black; border-radius:10px; corner-shape:squircle;  font-family: monospace;">True</span>, the ocean colour is set to brown. After 10 iterations (adding 1 to the pixel count of the boat 10 times), the loop resets and the ocean colour reverts to blue (in regular mode).
+
+                Sheep generate similarly but at a lower rate. This coding ensures that boat colour and sheep colour is only applied to ocean elevations and not to other elevations.
+
+                <h3> Python Libraries </h3>
+                <ul>
+                <li> PIL (Python Image Library) </li>
+                <li> Noise </li>
+                <li> Random </li>
+                </ul>
+                <h2> Why I made it </h2>
+
+                I made this project out of curiosity when I watched a YouTube video on how Minecraft works. I found a Medium article on how to use perlin noise inside python. Perlin noise generates randomness but with smooth transitions which makes it perfect to simulate world terrain generation which I found very fascinating.
+
+            </div>
+            <br>
+            <h1>Thanks for reading!</h1>
+        </div>
     </body>
 </html>
