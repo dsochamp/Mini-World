@@ -7,7 +7,7 @@ This mini world generator uses Perlin noise to generate randomly generated world
 
 ## How to install
 
-Open <a href='https://dsochamp.github.io/Mini-World'>dsochamp.github.io/Mini-World</a> and download the executable. This will be downloaded as a ```.zip``` file, unzip the zip file and navigate to the Dist folder and double click main. The executable may not work on Windows.
+Open <a href='https://dsochamp.github.io/Mini-World'>dsochamp.github.io/Mini-World</a> and download the executable. This will be downloaded as a ```.zip``` file, unzip the zip file and navigate to the Dist folder and double click main. The executable **only works on macOS**.
 
 ## How it works
 
